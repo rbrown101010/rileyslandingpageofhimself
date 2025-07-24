@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Riley Brown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="document">
+        <header class="document-header">
+            <h1>About Riley</h1>
+            <p class="subtitle">AI educator, entrepreneur, and future-builder</p>
+            <nav class="breadcrumb">
+                <a href="index.html" class="nav-link">← Back to Home</a>
+            </nav>
+        </header>
+
+        <main class="document-content">
+            <section class="biography">
+                <h2>Background</h2>
+                <p>Riley Brown is an AI education creator and entrepreneur based in the Greater Seattle Area. With over 312K followers across social platforms, he has established himself as a leading voice in making artificial intelligence accessible to everyone, regardless of technical background.</p>
+
+                <p>As Co-Founder of VibeCode, Riley is at the forefront of democratizing app development through AI. His approach combines practical education with innovative product development, helping people understand and leverage AI technologies in their daily work and creative pursuits.</p>
+            </section>
+
+            <section class="philosophy">
+                <h2>Philosophy</h2>
+                <p>Riley believes that AI should empower creativity rather than replace it. His current obsession with "vibe coded agentic applications" reflects his vision of a future where anyone can build sophisticated software simply by describing what they want to create.</p>
+
+                <p>Through his educational content and VibeCode platform, he's working to eliminate the traditional barriers between having an idea and making it reality. This philosophy extends to his teaching approach, where complex AI concepts are broken down into accessible, actionable insights.</p>
+            </section>
+
+            <section class="mission">
+                <h2>Mission</h2>
+                <p>Riley's mission is simple yet ambitious: to make AI development as intuitive and accessible as using everyday creative tools. He envisions a world where the gap between imagination and implementation disappears, where anyone with an idea can bring it to life through AI-powered tools.</p>
+
+                <p>This mission drives both his educational content creation and his work building VibeCode, demonstrating that the future of software development lies not in learning complex programming languages, but in learning to communicate effectively with AI systems.</p>
+            </section>
+
+            <section class="recognition">
+                <h2>Recognition</h2>
+                <p>Riley has been featured in discussions about "vibe coding" and its impact on the future of software development. His comprehensive guides and tutorials have helped thousands of people begin their journey with AI-powered development tools.</p>
+
+                <p>His work has been recognized across multiple platforms, from podcast appearances discussing how Vibecoding unlocks AI potential, to being featured in educational resources about the emerging field of AI-assisted development.</p>
+            </section>
+
+            <footer class="document-footer">
+                <p>Building bridges between human creativity and artificial intelligence</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Add page transition effect
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.href && !this.href.includes('#')) {
+                    e.preventDefault();
+                    document.body.classList.add('page-transition');
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

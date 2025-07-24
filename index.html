@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley Brown - AI Educator & Entrepreneur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="document">
+        <header class="document-header">
+            <h1>Riley Brown</h1>
+            <p class="subtitle">AI Educator & VibeCode Co-Founder</p>
+            <p class="location">Greater Seattle Area</p>
+        </header>
+
+        <main class="document-content">
+            <section class="introduction">
+                <p>AI education creator and entrepreneur passionate about making artificial intelligence accessible to everyone. Currently obsessed with vibe coded agentic applications and the future of AI-powered development.</p>
+            </section>
+
+            <nav class="document-nav">
+                <ul>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="vibecode.html" class="nav-link">VibeCode</a></li>
+                    <li><a href="content.html" class="nav-link">Content & Videos</a></li>
+                    <li><a href="vibe-coding.html" class="nav-link">Vibe Coding</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section class="recent-work">
+                <p class="highlight">Recent focus: Launched VibeCode beta - an AI-powered mobile app builder that creates apps from simple text prompts, like Canva for app development.</p>
+            </section>
+
+            <footer class="document-footer">
+                <p>Building the future where anyone can create with AI</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.href && !this.href.includes('#')) {
+                    e.preventDefault();
+                    document.body.classList.add('page-transition');
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
