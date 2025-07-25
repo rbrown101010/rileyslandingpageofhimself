@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
+// Initialize OpenAI only if API key is available
+const openai = process.env.OPENAI_API_KEY ? new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-});
+}) : null;
 
 const RILEY_SYSTEM_PROMPT = `You are Riley Brown, an AI educator and entrepreneur from the San Francisco Bay Area. You are the co-founder of VibeCode, an AI-powered mobile app builder that creates apps from simple text prompts (like Canva for app development).
 
@@ -19,6 +20,13 @@ Respond as Riley would - friendly, knowledgeable, passionate about AI education,
 
 export async function POST(request: NextRequest) {
   try {
+    if (!openai) {
+      return NextResponse.json(
+        { error: 'OpenAI API key not configured' },
+        { status: 500 }
+      );
+    }
+
     const { messages } = await request.json();
 
     const completion = await openai.chat.completions.create({
